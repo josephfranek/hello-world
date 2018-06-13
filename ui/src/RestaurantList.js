@@ -1,14 +1,16 @@
 import React from "react";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
-import './UserList.css';
+import './RestaurantList.css';
 
-const UserList = () => (
+const RestaurantList = () => (
   <Query
     query={gql`
       {
-        users(first: 10) {
+        restaurants (name: "Neighbor's Kitchen & Yard") {
           name
+          cuisines
+          webiste
         }
       }
     `}
@@ -18,10 +20,10 @@ const UserList = () => (
       if (error) return <p>Error</p>;
 
       return (
-          <div className="UserList">
-          <h1>Users:</h1>
+          <div className="RestaurantList">
+          <h1>Restaurants:</h1>
         <ul>
-          {data.users.map(({name}, i) => (
+          {data.restaurants.map(({name}, i) => (
           <li key={i}>{name}</li>
           ))}
         </ul>
@@ -31,4 +33,4 @@ const UserList = () => (
   </Query>
 );
 
-export default UserList;
+export default RestaurantList;
