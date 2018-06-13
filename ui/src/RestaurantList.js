@@ -10,7 +10,7 @@ const RestaurantList = () => (
         restaurants (name: "Neighbor's Kitchen & Yard") {
           name
           cuisines
-          webiste
+          website
         }
       }
     `}
