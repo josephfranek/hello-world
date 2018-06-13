@@ -1,4 +1,4 @@
-import { typeDefs, resolvers } from "./graphql-schema";
+import { typeDefs, resolvers } from "./schema";
 import { ApolloServer, gql, makeExecutableSchema } from "apollo-server";
 import { v1 as neo4j } from "neo4j-driver";
 import { augmentSchema } from "neo4j-graphql-js";
@@ -18,7 +18,7 @@ const driver = neo4j.driver(
   process.env.NEO4J_URI || "bolt://localhost:7687",
   neo4j.auth.basic(
     process.env.NEO4J_USER || "neo4j",
-    process.env.NEO4J_PASSWORD || "neo4j"
+    process.env.NEO4J_PASSWORD || "syscoLabs"
   )
 );
 
