@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={process.env.PUBLIC_URL + '/img/grandstack.png'} className="App-logo" alt="logo" />
+          <img src={process.env.PUBLIC_URL + '/img/sysco_blck-wht.png'} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to MAHI</h1>
         </header>
         
