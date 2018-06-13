@@ -13,13 +13,13 @@ type Restaurant {
 type Category {
   _id: ID!
   name: String!
-  items: [Item]
+  items: [MenuItem] @cypher(statement: "match (:Category)<-[:Belongs_To]-(i:MenuItem) return i")
 }
 
-type Item {
+type MenuItem {
   _id: ID!
   name: String!
-  desription: String
+  description: String
   price: Float
 }
 
